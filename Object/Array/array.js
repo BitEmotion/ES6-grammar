@@ -1,10 +1,15 @@
-//length
+// 프로퍼티
+
+/*
+    length
+*/
 {
     const arr = [1,2,3];
     console.log("arr.length : ", arr.length);
 }
 
 //static 메서드
+
 /*
     from
 
