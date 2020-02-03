@@ -1,5 +1,4 @@
 /*
-    https://victorydntmd.tistory.com/
     Function
 
     call

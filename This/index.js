@@ -24,20 +24,6 @@ const arrowFunc = () => {
 }
 
 {
-    function func(){
-        console.log("this func",this);
-        return function a(){
-            console.log("this inner func",this);
-            return function b(){
-                a();
-                console.log("this innerinner func",this);
-            }
-        }
-    }
-    func();
-}
-
-{
     const obj = {
         arrowFunc:() => {
             console.log("this arrowFunc",this);
@@ -49,8 +35,4 @@ const arrowFunc = () => {
 
     obj.arrowFunc();
     obj.func();
-}
-
-{
-    
 }
