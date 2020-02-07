@@ -11,31 +11,3 @@
     };
     [...iterable];
 }
-
-/*
-    iterator protocol
-    반복의 형식 순서에 대한 규약
-*/
-{
-    const iterator = () => {
-        const arr = [1,2,3,4,5];
-        let i = 0;
-        let value = '';
-        let isBoolean = false;
-        return {
-            next: () => {
-                if(i == (arr.length -1)){
-                    bool = true;
-                }
-                value = arr[i];
-                i++;
-                return {
-                    value,
-                    done: isBoolean
-                }
-            }
-        }
-    }
-    const iter = iterator()
-    iter.next();
-}

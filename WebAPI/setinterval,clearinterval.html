@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <!-- <canvas id="canvas"></canvas> -->
+        <img id="image"> 
+        <button onclick="stop()"></button>
+        <script>
+            const img =  document.querySelector("#image");
+            let isImg = false;
+            const imgArray = [
+                "https://lh3.googleusercontent.com/p/AF1QipMOdxZS80iHWSLfbQHu0ADJH-1l6-mrf_aKfcLV=w296-h202-n-k-rw-no-v1",
+                "https://lh5.googleusercontent.com/p/AF1QipOqfrbu3Iye1WWMlX0HmLdjh-3wW0jAKbsulSFQ=w325-h215-k-no",
+                "https://lh3.googleusercontent.com/p/AF1QipMtQ_3Dl4d8I0jmSGXlZBI_ydIzFycZmH9pXIEB=w296-h202-n-k-rw-no-v1",
+                "https://lh3.googleusercontent.com/p/AF1QipPVzYgTKZ78Q0pF36YxqiDgl55gSPaLr4PdpraD=w296-h202-n-k-rw-no-v1",
+                "https://lh3.googleusercontent.com/p/AF1QipNcJdLoZVpusRrvfhOU35mZq5UDtZiJoEKf1bvG=w296-h202-n-k-rw-no-v1",
+                "https://lh3.googleusercontent.com/p/AF1QipPKwe2PYVMxCMnjFr9DN8OfHInn3B9j9nHxbrpO=w296-h202-n-k-rw-no-v1"
+            ];
+            let set = setInterval(() => {
+                let index = 0;
+                const changeImg = () => {
+                    const arrIndex = Math.round(Math.random()*(imgArray.length -1));
+                    img.src = imgArray[arrIndex];
+                    index++;
+                }
+                changeImg();
+            },200);
+            const stop = () => {
+                clearInterval(set);
+            }   
+            console.log("setInterval",set);
+        </script>
+    </body>
+</html>
